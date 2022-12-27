@@ -241,6 +241,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24044df06c1dc6345a5c1a44cf8625aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSmoothMode: 1
+  _cellPrefab: {fileID: 2861685218071949533, guid: 11c99c7b8d4c3b1478bf1018152a432a, type: 3}
+  _viewportWidth: 900
+  _viewportHeight: 0
+  _allContentsNum: 100
   _paddingLeft: 55
   _paddingRight: 0
   _paddingTop: 40
@@ -248,11 +253,6 @@ MonoBehaviour:
   _cellSize: {x: 160, y: 200}
   _spacing: {x: 50, y: 50}
   _constraintCount: 3
-  _isSmoothMode: 1
-  _cellPrefab: {fileID: 2861685218071949533, guid: 11c99c7b8d4c3b1478bf1018152a432a, type: 3}
-  _viewportWidth: 900
-  _viewportHeight: 0
-  _allContentsNum: 100
   _isScrollKeyControllable: 1
   _scrollKeySpeed: 0.5
   _isFocusKeyControllable: 1
@@ -266,12 +266,11 @@ MonoBehaviour:
   _repeatStartDelay: 0.5
   _isDelayDecreasing: 1
   _delayDecreasingTime: 3
+  _isScrollKeySuspended: 0
+  _isFocusKeySuspended: 0
+  _focusedCellNo: 0
   isFolding1: 1
   isFolding2: 0
-  isScrollKeySuspended: 0
-  isFocusKeySuspended: 0
-  focusedCellNo: 0
-  elapsedTime: 0
 --- !u!1 &99721728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b948be3caf68f4e8b251cecdcf967b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isSmoothMode: 1
+  _cellPrefab: {fileID: 2861685218071949533, guid: 11c99c7b8d4c3b1478bf1018152a432a, type: 3}
+  _viewportWidth: 0
+  _viewportHeight: 900
+  _allContentsNum: 100
   _paddingLeft: 40
   _paddingRight: 0
   _paddingTop: 55
@@ -1267,11 +1271,6 @@ MonoBehaviour:
   _cellSize: {x: 200, y: 160}
   _spacing: {x: 50, y: 50}
   _constraintCount: 3
-  _isSmoothMode: 1
-  _cellPrefab: {fileID: 2861685218071949533, guid: 11c99c7b8d4c3b1478bf1018152a432a, type: 3}
-  _viewportWidth: 0
-  _viewportHeight: 900
-  _allContentsNum: 100
   _isScrollKeyControllable: 1
   _scrollKeySpeed: 0.5
   _isFocusKeyControllable: 1
@@ -1285,11 +1284,11 @@ MonoBehaviour:
   _repeatStartDelay: 0.5
   _isDelayDecreasing: 1
   _delayDecreasingTime: 3
+  _isScrollKeySuspended: 0
+  _isFocusKeySuspended: 0
+  _focusedCellNo: 0
   isFolding1: 1
   isFolding2: 0
-  isScrollKeySuspended: 0
-  isFocusKeySuspended: 0
-  focusedCellNo: 0
 --- !u!1 &1876820472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,10 +1449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
