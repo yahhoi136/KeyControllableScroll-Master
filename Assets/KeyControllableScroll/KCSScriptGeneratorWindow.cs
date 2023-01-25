@@ -6,16 +6,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System;
 
-/// <summary>
-/// ・同名ファイルの確認、他のOS(Mac)は要確認かも
-/// ・もっとトグルや折り畳みをすぐ左に置いて見やすくわかりやすくしたい。でも拡張カスタムまじで時間かかりそうだから、先にほかの部分実装したほうがいい気がする、、、。
-/// ・CellPrefabごとにKCSを作る＆CellPrefabの中身が変わるならKCSを作り直す必要があることを言及。
-/// ・fullChildCountが分かりにくいなら、各々で引数名を変更してください。ただしInterfaceと実装の両方で引数名を変える必要があります。
-/// ・作成時にエラーが出ることがあるが、原因はDataSouceの引数にUsingが必要なTypeを使っているためです。その時は、各エラーを生じるスクリプトに行って必要なUsingを追加してください。
-/// ・アセンブリ分けは、もうKCSのフォルダでひとくくりにする。そんで、あとで中身をinternalにできるところはして安全にしたい。
-/// ・一応注意書きとかを加えよう。・同じ名前のKCSを作ると上書きされます。・不必要なKCSを削除したいときはKeyControllableScroll内に作られた、「KCS-"あなたの設定した名前"」、「KCSInspector-"あなたの設定した名前"」、「KCSCreateMenu？？-"あなたの設定した名前」を削除してください。
-/// </summary>
-
 namespace KCSScriptGenerator
 {
     public class KCSScriptGeneratorWindow : EditorWindow
@@ -51,8 +41,6 @@ namespace KCSScriptGenerator
 
 
         // ウィンドウの設定
-        // 基本OnGUI()はカーソル移動毎にめっちゃUpDateされる。BeginChangeCheck()とEndChangeCheck()を宣言している時には、その間の処理だけパラメ変化時にUpDateされる
-        // なんかEditor拡張のOnGUI()系あるあるらしいけど、メソッドをはさみまくるとバグる。特にreturn; が機能しなくなることが多いから、挙動変なら直接書く。
         void OnGUI()
         {
             // ランタイムは使用不可

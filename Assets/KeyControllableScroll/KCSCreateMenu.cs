@@ -6,24 +6,24 @@ namespace UnityEditor.UI
     public class KCSCreateMenu
     {
         [MenuItem("GameObject/UI/KCS/Horizontal KCS Framework", false, 2031)]
-        static public void AddHorizontalKeyControllableScroll(MenuCommand menuCommand)
+        static public void AddHorizontalKeCS(MenuCommand menuCommand)
         {
-            GameObject go = CreateHorizontalKCS();
+            GameObject go = CreateHorizontalKCSObjcet();
             PlaceUI(go, menuCommand);
             
         }
     
         [MenuItem("GameObject/UI/KCS/Vertical KCS Framework", false, 2031)]
-        static public void AddVerticalKeyControllableScroll(MenuCommand menuCommand)
+        static public void AddVerticalKCS(MenuCommand menuCommand)
         {
-            GameObject go = CreateVerticalKCS();
+            GameObject go = CreateVerticalKCSObject();
             PlaceUI(go, menuCommand);
         }
 
 
-#region CreateKCS()
+#region CreateObject
 
-        public static GameObject CreateHorizontalKCS()
+        public static GameObject CreateHorizontalKCSObjcet()
         {
             // オブジェクトセット
             GameObject root = CreateRootUI("HorizontalKCS", new Vector2(300, 300));
@@ -115,7 +115,7 @@ namespace UnityEditor.UI
             return root;
         }
 
-        public static GameObject CreateVerticalKCS()
+        public static GameObject CreateVerticalKCSObject()
         {
             // オブジェクトセット
             GameObject root = CreateRootUI("VerticalKCS", new Vector2(300, 300));
