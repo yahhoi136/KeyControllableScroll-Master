@@ -183,7 +183,7 @@ namespace UnityEngine.UI
             }
 
             RedrawAll();
-            Invoke(nameof(FocusFirstCell), 0.01f); // EventSystem.SetSelectedあるあるのずれ、なぜか一瞬ずらさないとフォーカスが外れる。
+            Invoke(nameof(FocusFirstCell), 0.05f); // EventSystem.SetSelectedあるあるのずれ、なぜか一瞬ずらさないとフォーカスが外れる。
         }
 
         // 最初のセルにフォーカスする
@@ -238,7 +238,7 @@ namespace UnityEngine.UI
             
             // フォーカス指定
             _focusedCellNo = jumpNo;
-            await Task.Delay(10); // SetSelectedあるあるのバグ、少し遅らせないとNullになる。
+            await Task.Delay(50); // SetSelectedあるあるのバグ、少し遅らせないとNullになる。
             int targetIndex = _focusedCellNo - nowCenterRowNo * _constraintCount + (maxDisplayRowNum / 2) * _constraintCount;
             EventSystem.current.SetSelectedGameObject(recycleArray[targetIndex].go);
         }
